@@ -1,5 +1,9 @@
+# =====fantasticControllers=====
+fantasticControllers = angular.module('fantasticControllers', []);
+
 # ========HomeController=======
-fantastic.controller 'HomeController', ($scope, $http, $log, _, postService) ->
+
+fantasticControllers.controller 'HomeController', ($scope, $http, $log, _, postService) ->
     $scope.posts = [];
 
     logError = (data, status) ->
@@ -24,7 +28,7 @@ fantastic.controller 'HomeController', ($scope, $http, $log, _, postService) ->
 
 
 # =======LoginController=========
-fantastic.controller 'LoginController', ($scope, $http, $log, _) ->
+fantasticControllers.controller 'LoginController', ($scope, $http, $log, _) ->
     $scope.logError = (data, status) ->
         $log.log('code ' + status + ': ' + data);
 
@@ -40,7 +44,7 @@ fantastic.controller 'LoginController', ($scope, $http, $log, _) ->
 
 
 # =====RegisterController=====
-fantastic.controller 'RegisterController', ($scope, $http, $log, _) ->
+fantasticControllers.controller 'RegisterController', ($scope, $http, $log, _) ->
     $scope.logError = (data, status) ->
         $log.log('code ' + status + ': ' + data)
 

@@ -3,7 +3,13 @@ underscore = angular.module 'underscore', []
 underscore.factory '_', ->
     window._
 
-fantastic = angular.module "fantastic", ["underscore", "ngSanitize",'ngRoute']
+fantastic = angular.module "fantastic", [
+    "underscore",
+    "ngSanitize",
+    'ngRoute',
+    'fantasticControllers'
+
+]
     .config ($interpolateProvider) ->
         $interpolateProvider.startSymbol '[['
         $interpolateProvider.endSymbol ']]'
@@ -13,13 +19,13 @@ fantastic.config ['$routeProvider',
     $routeProvider
     .when '/',
         templateUrl: '/public/partials/home.html',
-        controller: 'PhoneListCtrl'
-    .when '/phones',
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
-    .when '/phones/:phoneId',
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+        controller: 'HomeController'
+    .when '/login',
+        templateUrl: '/public/partials/login.html',
+        controller: 'LoginController'
+    .when '/register',
+        templateUrl: '/public/partials/register.html',
+        controller: 'RegisterController'
     .otherwise
-        redirectTo: '/phones'
+        redirectTo: '/'
   ]
