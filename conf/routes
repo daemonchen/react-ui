@@ -5,6 +5,7 @@
 module:testrunner
 
 GET     /                                       Home.Index
+POST    /register                               User.Register
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -34,12 +34,12 @@ fantasticControllers.controller 'LoginController', ($scope, $http, $log, _) ->
 
     $scope.login = () ->
         $http.get '/admin/login',
-            params:
-                username: $scope.username,
-                password: MD5($scope.password)
+            username: $scope.username,
+            password: MD5($scope.password)
 
-        .success () ->
-            window.location.href = "/"
+        .success (data) ->
+            # window.location.href = "/"
+            console.log "login success:", data
         .error $scope.logError
 
 
@@ -50,13 +50,15 @@ fantasticControllers.controller 'RegisterController', ($scope, $http, $log, _) -
 
 
     $scope.register = () ->
-        return $http.post '/admin/register',
-            params:
-                username: $scope.username,
-                password: $scope.password
+        $log.log($scope.username, $scope.password, $scope.email);
+        return $http.post '/register',
+            name: $scope.username,
+            password: $scope.password,
+            email: $scope.email
 
-        .success () ->
-            window.location.href = "/"
+        .success (data) ->
+            console.log "register success:", data
+            # window.location.href = "/"
         .error $scope.logError
 
 

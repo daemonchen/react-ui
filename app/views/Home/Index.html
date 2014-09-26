@@ -4,7 +4,14 @@
 {{append . "moreScripts" "/public/js/directive.js"}}
 {{append . "moreScripts" "/public/js/service.js"}}
 {{template "header.html" .}}
-<div id="Wrapper" ng-view>
+<div id="Wrapper">
+    <div class="content">
+        {{template "sidebar.html" .}}
+        <div id="Main"  ng-view>
 
+        </div>
+    </div>
+    <div class="c"></div>
+    <div class="sep20"></div>
 </div>
 {{template "footer.html" .}}

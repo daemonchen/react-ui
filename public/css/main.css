@@ -402,7 +402,7 @@ ol {
 
 .dock_area {
     background-color: #edf3f5;
-    background-image: url("/static/img/dock_shadow.png");
+    background-image: url("/public/img/dock_shadow.png");
     background-repeat: repeat-x;
     padding: 0px;
 }
@@ -766,7 +766,7 @@ div.node:hover .node_compose {
 }
 
 .super.button {
-    background-image: url("/static/img/bg_blended_light.png");
+    background-image: url("/public/img/bg_blended_light.png");
     padding: 4px 15px 4px 15px;
     border: 1px solid rgba(80,80,90, 0.2);
     border-bottom-color: rgba(80,80,90, 0.35);
@@ -1151,7 +1151,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_arrow.png?v=99d440401c90c5f6bbc1da8f0514c248");
+    background-image: url("/public/img/ico_arrow.png?v=99d440401c90c5f6bbc1da8f0514c248");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
@@ -1162,7 +1162,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_code.png?v=96dfc9ee78d86079ae70cbeb01e7f230");
+    background-image: url("/public/img/ico_code.png?v=96dfc9ee78d86079ae70cbeb01e7f230");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
@@ -1173,7 +1173,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_note.png?v=4214e59aaa5d7e127790724882249f57");
+    background-image: url("/public/img/ico_note.png?v=4214e59aaa5d7e127790724882249f57");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
@@ -1184,7 +1184,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_note_arrow.png?v=40b3dc03c651c32c30993233c99dd138");
+    background-image: url("/public/img/ico_note_arrow.png?v=40b3dc03c651c32c30993233c99dd138");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
@@ -1195,7 +1195,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_document_rich.png?v=639efe90beeb07d77c27b1d10c9ae28e");
+    background-image: url("/public/img/ico_document_rich.png?v=639efe90beeb07d77c27b1d10c9ae28e");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
@@ -1206,7 +1206,7 @@ table.data td.d {
     width: 16px;
     height: 16px;
     vertical-align: middle;
-    background-image: url("/static/img/ico_folder_blue.png?v=7381259bc2f513209e0bb577a3ade2ab");
+    background-image: url("/public/img/ico_folder_blue.png?v=7381259bc2f513209e0bb577a3ade2ab");
     background-repeat: no-repeat;
     margin-right: 8px;
     margin-top: -2px;
