@@ -28,14 +28,14 @@ fantasticControllers.controller 'HomeController', ($scope, $http, $log, _, postS
 
 
 # =======LoginController=========
-fantasticControllers.controller 'LoginController', ($scope, $http, $log, _) ->
+fantasticControllers.controller 'LoginController', ($scope, $http, $log, _, md5) ->
     $scope.logError = (data, status) ->
         $log.log('code ' + status + ': ' + data);
 
     $scope.login = () ->
         $http.get '/admin/login',
             username: $scope.username,
-            password: MD5($scope.password)
+            password: md5.createHash($scope.password || '')
 
         .success (data) ->
             # window.location.href = "/"
@@ -44,20 +44,20 @@ fantasticControllers.controller 'LoginController', ($scope, $http, $log, _) ->
 
 
 # =====RegisterController=====
-fantasticControllers.controller 'RegisterController', ($scope, $http, $log, _) ->
+fantasticControllers.controller 'RegisterController', ($scope, $http, $location, $log, _, md5) ->
     $scope.logError = (data, status) ->
-        $log.log('code ' + status + ': ' + data)
+        $log.log 'code ', status, ': ', data
 
 
     $scope.register = () ->
-        $log.log($scope.username, $scope.password, $scope.email);
+        # $log.log($scope.username, $scope.password, $scope.email);
         return $http.post '/register',
-            name: $scope.username,
-            password: $scope.password,
+            username: $scope.username,
+            password: md5.createHash($scope.password || ''),
             email: $scope.email
 
         .success (data) ->
-            console.log "register success:", data
+            $location.path "/"
             # window.location.href = "/"
         .error $scope.logError
 

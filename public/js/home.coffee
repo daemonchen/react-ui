@@ -7,6 +7,7 @@ fantastic = angular.module "fantastic", [
     "underscore",
     "ngSanitize",
     'ngRoute',
+    'angular-md5',
     'fantasticControllers'
 
 ]

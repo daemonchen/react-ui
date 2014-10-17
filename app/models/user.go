@@ -9,7 +9,7 @@ import (
 
 type User struct {
     Id       bson.ObjectId          `bson:"_id,omitempty"`
-    Name     string                 `bson:"name"`
+    Username string                 `bson:"username"`
     Email    string                 `bson:"email"`
     Password string                 `bson:"password"`
     Meta     map[string]interface{} `bson:",omitempty"`
@@ -27,7 +27,7 @@ func getCollection(s *mgo.Session) *mgo.Collection {
 }
 
 func (u *User) Save(s *mgo.Session) error {
-    _, err := getCollection(s).Upsert(bson.M{"name": u.Name}, u)
+    _, err := getCollection(s).Upsert(bson.M{"username": u.Username}, u)
     return err
 }
 
